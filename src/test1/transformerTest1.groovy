@@ -83,3 +83,15 @@ composite.compose()
 println "composite.input=" + composite.input
 println "composite.input.total=" + composite.input.sum {slot -> slot.type.price * slot.quantity}
 println "composite.output=" + composite.output
+
+/*
+def produce = 1
+def unit = 1
+def to(what) {
+    ['1': { unit ->
+        [of: 'a']
+    }]
+}
+
+to (produce).1 unit of 'Cap Recharger II' take 1 unit of 'Cap Recharger I', 2 units of 'R.A.M.- Energy Tech', 3 units of 'Tritanium', 4 units of 'Pyerite', 5 units of 'Mexallon' and 6 units of 'Noxcium'
+*/
