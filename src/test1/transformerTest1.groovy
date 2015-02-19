@@ -84,14 +84,50 @@ println "composite.input=" + composite.input
 println "composite.input.total=" + composite.input.sum {slot -> slot.type.price * slot.quantity}
 println "composite.output=" + composite.output
 
-/*
-def produce = 1
-def unit = 1
-def to(what) {
-    ['1': { unit ->
-        [of: 'a']
-    }]
+ExpandoMetaClass.enableGlobally()
+Number.metaClass.unit = {type -> new MaterialSlot(type: type, quantity: delegate) }
+Number.metaClass.units = {type -> new MaterialSlot(type: type, quantity: delegate) }
+
+def transformers = [:]
+
+class TransformerBuilder {
+    def Transformer transformer
+    def transformers
+
+    def take(list) {
+        def bill = new BillOfMaterial()
+        list.each {MaterialSlot slot ->
+            bill << slot
+            slot.transformer = transformer
+            def Transformer out = transformers[slot.type]
+            if (out != null) {
+                def MaterialSlot fromSlot = out.output.bill[slot.type]
+                def link = new Link(from: fromSlot, to: slot)
+                fromSlot.link = link
+                slot.link = link
+            }
+        }
+
+        transformer.input = bill
+        transformer
+    }
 }
 
-to (produce).1 unit of 'Cap Recharger II' take 1 unit of 'Cap Recharger I', 2 units of 'R.A.M.- Energy Tech', 3 units of 'Tritanium', 4 units of 'Pyerite', 5 units of 'Mexallon' and 6 units of 'Noxcium'
-*/
+def to = [
+        produce: {MaterialSlot slot ->
+            def bill = new BillOfMaterial()
+            bill << slot
+
+            def transformer = new Transformer(name: "$slot.type.name Blueprint", output: bill)
+            slot.transformer = transformer
+            transformers[slot.type] = transformer
+            new TransformerBuilder(transformer: transformer, transformers: transformers)
+        }
+]
+
+// to produce 1 unit of 'Cap Recharger II' take 1 unit of 'Cap Recharger I', 2 units of 'R.A.M.- Energy Tech', 3 units of 'Tritanium', 4 units of 'Pyerite', 5 units of 'Mexallon' and 6 units of 'Noxcium'
+println to.produce(1.unit(capRechargerI)).take([1420.units(tritanium), 598.units(pyerite), 767.units(mexallon), 2.units(megacyte)])
+
+println to.produce(1.unit(capRechargerII)).take([1.unit(capRechargerI), 1.unit(ramET)])
+
+println transformers

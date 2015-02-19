@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cc7fe41-717d-4060-a5b2-a3b1116e2636" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test1/test2.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test1/Transformer.groovy" afterPath="$PROJECT_DIR$/src/test1/Transformer.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test1/test2.groovy" afterPath="$PROJECT_DIR$/src/test1/test2.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test1/transformerTest1.groovy" afterPath="$PROJECT_DIR$/src/test1/transformerTest1.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GroovyTest1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test2.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test2.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test1/test2.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38511327" vertical-offset="0" max-vertical-offset="618">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -52,8 +54,8 @@
       <file leaf-file-name="Transformer.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test1/Transformer.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1234" max-vertical-offset="1785">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1853">
+              <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -84,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transformerTest1.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="transformerTest1.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test1/transformerTest1.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1146" max-vertical-offset="1751">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.10082645" vertical-offset="1758" max-vertical-offset="2363">
+              <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -97,11 +99,29 @@
       <file leaf-file-name="DefaultGroovyMethods.java" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ideaLibSources/groovy-2.3.8-sources.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="79475" max-vertical-offset="253470">
+            <state vertical-scroll-proportion="0.0" vertical-offset="79475" max-vertical-offset="253402">
               <caret line="4744" column="26" selection-start-line="4744" selection-start-column="26" selection-end-line="4744" selection-end-column="26" />
               <folding>
                 <element signature="e#0#559542#0" expanded="false" />
                 <element signature="imports" expanded="false" />
+                <element signature="e#154800#154812#0" expanded="false" />
+                <element signature="e#158199#158212#0" expanded="false" />
+                <element signature="e#165762#165774#0" expanded="false" />
+                <element signature="e#167111#167137#0" expanded="false" />
+                <element signature="e#168733#168747#0" expanded="false" />
+                <element signature="e#170917#170930#0" expanded="false" />
+                <element signature="e#173518#173530#0" expanded="false" />
+                <element signature="e#223833#223839#0" expanded="false" />
+                <element signature="e#224658#224664#0" expanded="false" />
+                <element signature="e#240588#240596#0" expanded="false" />
+                <element signature="e#257749#257755#0" expanded="false" />
+                <element signature="e#258611#258617#0" expanded="false" />
+                <element signature="e#323249#323256#0" expanded="false" />
+                <element signature="e#467943#468048#0" expanded="false" />
+                <element signature="e#468047#468048#0" expanded="false" />
+                <element signature="e#473441#473449#0" expanded="false" />
+                <element signature="e#476157#476164#0" expanded="false" />
+                <element signature="e#559397#559404#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -139,13 +159,16 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test1/Transformer.groovy" />
-        <option value="$PROJECT_DIR$/src/test1/transformerTest1.groovy" />
         <option value="$PROJECT_DIR$/src/test1/test1.groovy" />
         <option value="$PROJECT_DIR$/src/test1/test2.groovy" />
+        <option value="$PROJECT_DIR$/src/test1/Transformer.groovy" />
+        <option value="$PROJECT_DIR$/src/test1/transformerTest1.groovy" />
       </list>
     </option>
   </component>
@@ -183,7 +206,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -245,6 +267,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,7 +289,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="Groovy.test2">
+  <component name="RunManager" selected="Groovy.transformerTest1">
     <configuration default="false" name="test1" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="GroovyTest1" />
       <setting name="path" value="file://$PROJECT_DIR$/src/test1/test1.groovy" />
@@ -565,8 +588,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Groovy.test2" />
-        <item index="1" class="java.lang.String" itemvalue="Groovy.transformerTest1" />
+        <item index="0" class="java.lang.String" itemvalue="Groovy.transformerTest1" />
+        <item index="1" class="java.lang.String" itemvalue="Groovy.test2" />
         <item index="2" class="java.lang.String" itemvalue="Groovy.test1" />
       </list>
     </recent_temporary>
@@ -589,11 +612,12 @@
       <workItem from="1424179435332" duration="1358000" />
       <workItem from="1424244501582" duration="11058000" />
       <workItem from="1424284874439" duration="6719000" />
+      <workItem from="1424328944650" duration="10720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26092000" />
+    <option name="totallyTimeSpent" value="36812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -610,7 +634,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32987553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -649,12 +673,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test1/Transformer.groovy</url>
-          <line>92</line>
+          <line>96</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test1/Transformer.groovy</url>
-          <line>73</line>
+          <line>77</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -668,6 +692,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test1/test1.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1292">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test1/test2.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test1/Transformer.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1234" max-vertical-offset="1785">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="23906" max-vertical-offset="53142">
+          <caret line="1452" column="0" selection-start-line="1452" selection-start-column="0" selection-end-line="1452" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#123952#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_25/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13519" max-vertical-offset="26826">
+          <caret line="829" column="0" selection-start-line="829" selection-start-column="0" selection-end-line="829" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#60784#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test1/transformerTest1.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1146" max-vertical-offset="1751">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/groovy-2.3.8-sources.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="79475" max-vertical-offset="253402">
+          <caret line="4744" column="26" selection-start-line="4744" selection-start-column="26" selection-end-line="4744" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#559542#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#154800#154812#0" expanded="false" />
+            <element signature="e#158199#158212#0" expanded="false" />
+            <element signature="e#165762#165774#0" expanded="false" />
+            <element signature="e#167111#167137#0" expanded="false" />
+            <element signature="e#168733#168747#0" expanded="false" />
+            <element signature="e#170917#170930#0" expanded="false" />
+            <element signature="e#173518#173530#0" expanded="false" />
+            <element signature="e#223833#223839#0" expanded="false" />
+            <element signature="e#224658#224664#0" expanded="false" />
+            <element signature="e#240588#240596#0" expanded="false" />
+            <element signature="e#257749#257755#0" expanded="false" />
+            <element signature="e#258611#258617#0" expanded="false" />
+            <element signature="e#323249#323256#0" expanded="false" />
+            <element signature="e#467943#468048#0" expanded="false" />
+            <element signature="e#468047#468048#0" expanded="false" />
+            <element signature="e#473441#473449#0" expanded="false" />
+            <element signature="e#476157#476164#0" expanded="false" />
+            <element signature="e#559397#559404#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/groovy-2.3.8-sources.jar!/org/codehaus/groovy/runtime/InvokerHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8256" max-vertical-offset="15623">
+          <caret line="553" column="35" selection-start-line="553" selection-start-column="35" selection-end-line="553" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#36260#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#14913#15030#0" expanded="false" />
+            <element signature="e#15029#15030#0" expanded="false" />
+            <element signature="e#15447#15970#0" expanded="false" />
+            <element signature="e#15969#15970#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/groovy-2.3.8-sources.jar!/org/codehaus/groovy/runtime/typehandling/DefaultTypeTransformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6318" max-vertical-offset="14161">
+          <caret line="419" column="29" selection-start-line="419" selection-start-column="29" selection-end-line="419" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#30401#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test1/test1.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1292">
@@ -720,6 +852,24 @@
           <folding>
             <element signature="e#0#559542#0" expanded="false" />
             <element signature="imports" expanded="false" />
+            <element signature="e#154800#154812#0" expanded="false" />
+            <element signature="e#158199#158212#0" expanded="false" />
+            <element signature="e#165762#165774#0" expanded="false" />
+            <element signature="e#167111#167137#0" expanded="false" />
+            <element signature="e#168733#168747#0" expanded="false" />
+            <element signature="e#170917#170930#0" expanded="false" />
+            <element signature="e#173518#173530#0" expanded="false" />
+            <element signature="e#223833#223839#0" expanded="false" />
+            <element signature="e#224658#224664#0" expanded="false" />
+            <element signature="e#240588#240596#0" expanded="false" />
+            <element signature="e#257749#257755#0" expanded="false" />
+            <element signature="e#258611#258617#0" expanded="false" />
+            <element signature="e#323249#323256#0" expanded="false" />
+            <element signature="e#467943#468048#0" expanded="false" />
+            <element signature="e#468047#468048#0" expanded="false" />
+            <element signature="e#473441#473449#0" expanded="false" />
+            <element signature="e#476157#476164#0" expanded="false" />
+            <element signature="e#559397#559404#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -822,6 +972,24 @@
           <folding>
             <element signature="e#0#559542#0" expanded="false" />
             <element signature="imports" expanded="false" />
+            <element signature="e#154800#154812#0" expanded="false" />
+            <element signature="e#158199#158212#0" expanded="false" />
+            <element signature="e#165762#165774#0" expanded="false" />
+            <element signature="e#167111#167137#0" expanded="false" />
+            <element signature="e#168733#168747#0" expanded="false" />
+            <element signature="e#170917#170930#0" expanded="false" />
+            <element signature="e#173518#173530#0" expanded="false" />
+            <element signature="e#223833#223839#0" expanded="false" />
+            <element signature="e#224658#224664#0" expanded="false" />
+            <element signature="e#240588#240596#0" expanded="false" />
+            <element signature="e#257749#257755#0" expanded="false" />
+            <element signature="e#258611#258617#0" expanded="false" />
+            <element signature="e#323249#323256#0" expanded="false" />
+            <element signature="e#467943#468048#0" expanded="false" />
+            <element signature="e#468047#468048#0" expanded="false" />
+            <element signature="e#473441#473449#0" expanded="false" />
+            <element signature="e#476157#476164#0" expanded="false" />
+            <element signature="e#559397#559404#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -847,22 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test1/Transformer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1234" max-vertical-offset="1785">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test1/transformerTest1.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1146" max-vertical-offset="1751">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test1/test1.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1292">
@@ -873,8 +1025,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test1/test2.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38511327" vertical-offset="0" max-vertical-offset="618">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test1/Transformer.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1853">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test1/transformerTest1.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10082645" vertical-offset="1758" max-vertical-offset="2363">
+          <caret line="107" column="13" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
           <folding />
         </state>
       </provider>

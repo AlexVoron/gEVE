@@ -59,6 +59,10 @@ class Transformer {
 
     BillOfMaterial input
     BillOfMaterial output
+
+    def String toString() {
+        "[$name:$input->$output]"
+    }
 }
 
 class CompositeTransformer extends Transformer {
