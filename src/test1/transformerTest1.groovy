@@ -12,8 +12,14 @@ def nocxium = new MaterialType(name: "Noxcium", typeId: 38, price: 704.18)
 def morphite = new MaterialType(name: "Morphite", typeId: 39, price: 704.18)
 def megacyte = new MaterialType(name: "Megacyte", typeId: 40, price: 894.80)
 
-def capRechargerI = new MaterialType(name: "Cap Recharger I", typeId: 100, price: 40000)
+def capRechargerI = new MaterialType(name: "Cap Recharger I", typeId: 1195, price: 41700)
+def ramET = new MaterialType(name: "R.A.M.- Energy Tech", typeId: 11482, price: 65.53)
 
+def superconductors = new MaterialType(name: 'Superconductors', typeId: 9838, price: 6710)
+
+def capRechargerII = new MaterialType(name: "Cap Recharger II", typeId: 2032, price: 423625)
+
+/*
 def capRechargerITransformer = new Transformer(name: "Cap Recharger I Blueprint")
 
 def capRechIInputBill = new BillOfMaterial()
@@ -29,8 +35,6 @@ def capRechIOutSlot = new MaterialSlot(type: capRechargerI, quantity: 1, transfo
 capRechIOutputBill << capRechIOutSlot
 
 capRechargerITransformer.output = capRechIOutputBill
-
-def ramET = new MaterialType(name: "R.A.M.- Energy Tech", typeId: 101, price: 65)
 
 def ramETTransformer = new Transformer(name: "R.A.M.- Energy Tech Blueprint")
 
@@ -79,10 +83,7 @@ composite.transformers << ramETTransformer
 composite.transformers << capRechargerIITransformer
 
 composite.compose()
-
-println "composite.input=" + composite.input
-println "composite.input.total=" + composite.input.sum {slot -> slot.type.price * slot.quantity}
-println "composite.output=" + composite.output
+*/
 
 ExpandoMetaClass.enableGlobally()
 Number.metaClass.unit = {type -> new MaterialSlot(type: type, quantity: delegate) }
@@ -113,6 +114,13 @@ class TransformerBuilder {
     }
 }
 
+def compose(String name, Closure closure) {
+    def composite = new CompositeTransformer(name: name)
+    closure.call(composite)
+    composite.compose()
+    composite
+}
+
 def to = [
         produce: {MaterialSlot slot ->
             def bill = new BillOfMaterial()
@@ -125,9 +133,17 @@ def to = [
         }
 ]
 
+def composite = compose("Cap Recharger II Production") { composite ->
 // to produce 1 unit of 'Cap Recharger II' take 1 unit of 'Cap Recharger I', 2 units of 'R.A.M.- Energy Tech', 3 units of 'Tritanium', 4 units of 'Pyerite', 5 units of 'Mexallon' and 6 units of 'Noxcium'
-println to.produce(1.unit(capRechargerI)).take([1420.units(tritanium), 598.units(pyerite), 767.units(mexallon), 2.units(megacyte)])
-
-println to.produce(1.unit(capRechargerII)).take([1.unit(capRechargerI), 1.unit(ramET)])
+    composite << to.produce(1.unit(capRechargerI)).take([1420.units(tritanium), 598.units(pyerite), 767.units(mexallon), 2.units(megacyte)])
+    composite << to.produce(100.units(ramET)).take([529.units(tritanium), 422.units(pyerite), 211.units(mexallon), 78.units(isogen), 35.units(nocxium)])
+    composite << to.produce(1.unit(capRechargerII)).take([1.unit(capRechargerI), 1.unit(ramET), 5.units(superconductors)])
+}
 
 println transformers
+
+println "composite.input=" + composite.input
+composite.input.each {slot -> println '' + slot.type + ':' + (slot.type.price * slot.quantity)}
+println "composite.input.total=" + composite.input.sum {slot -> slot.type.price * slot.quantity}
+println "composite.output=" + composite.output
+

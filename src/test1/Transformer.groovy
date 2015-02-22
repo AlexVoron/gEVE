@@ -68,6 +68,10 @@ class Transformer {
 class CompositeTransformer extends Transformer {
     def transformers = []
 
+    def leftShift(Transformer transformer) {
+        transformers << transformer
+    }
+
     private Transformer findTerminalTransformer() {
         transformers.find {
             transformer -> transformer.output.every { slot -> slot.link == null }
