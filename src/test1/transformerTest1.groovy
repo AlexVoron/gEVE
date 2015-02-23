@@ -17,6 +17,15 @@ def ramET = new MaterialType(name: "R.A.M.- Energy Tech", typeId: 11482, price: 
 
 def superconductors = new MaterialType(name: 'Superconductors', typeId: 9838, price: 6710)
 
+def nanotransostors = new MaterialType(name: 'Nanotransistors', typeId: 16681, price: 2420)
+def phenolCompos = new MaterialType(name: 'Phenolic Composites', typeId: 16680, price: 1547)
+def terahertzMetamaterials = new MaterialType(name: 'Terahertz Metamaterials', typeId: 33360, price: 11836)
+def tungstenCarbide = new MaterialType(name: 'Tungsten Carbide', typeId: 16672, price: 118.5)
+def fullerides = new MaterialType(name: 'Fullerides', typeId: 16679, price: 600)
+
+def nanoelMicroproc = new MaterialType(name: 'Nanoelectrical Microprocessor', typeId: 11539, price: 63938)
+def tesseractCapUnit = new MaterialType(name: 'Tesseract Capacitor Unit', typeId: 11554, price: 36000)
+
 def capRechargerII = new MaterialType(name: "Cap Recharger II", typeId: 2032, price: 423625)
 
 /*
@@ -137,7 +146,9 @@ def composite = compose("Cap Recharger II Production") { composite ->
 // to produce 1 unit of 'Cap Recharger II' take 1 unit of 'Cap Recharger I', 2 units of 'R.A.M.- Energy Tech', 3 units of 'Tritanium', 4 units of 'Pyerite', 5 units of 'Mexallon' and 6 units of 'Noxcium'
     composite << to.produce(1.unit(capRechargerI)).take([1420.units(tritanium), 598.units(pyerite), 767.units(mexallon), 2.units(megacyte)])
     composite << to.produce(100.units(ramET)).take([529.units(tritanium), 422.units(pyerite), 211.units(mexallon), 78.units(isogen), 35.units(nocxium)])
-    composite << to.produce(1.unit(capRechargerII)).take([1.unit(capRechargerI), 1.unit(ramET), 5.units(superconductors)])
+    composite << to.produce(1.unit(nanoelMicroproc)).take([2.units(nanotransostors), 6.units(phenolCompos), 2.units(terahertzMetamaterials), 17.units(tungstenCarbide)])
+    composite << to.produce(1.unit(tesseractCapUnit)).take([11.units(fullerides), 1.unit(nanotransostors), 2.units(terahertzMetamaterials), 27.units(tungstenCarbide)])
+    composite << to.produce(1.unit(capRechargerII)).take([1.unit(capRechargerI), 1.unit(ramET), 5.units(superconductors), 3.units(morphite), 1.unit(tesseractCapUnit), 1.unit(nanoelMicroproc)])
 }
 
 println transformers
