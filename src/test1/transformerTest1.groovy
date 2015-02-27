@@ -1,5 +1,8 @@
 package test1
 
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
 /**
  * Created by a.n.vorotnikov on 18.02.2015.
  */
@@ -28,9 +31,62 @@ def tesseractCapUnit = new MaterialType(name: 'Tesseract Capacitor Unit', typeId
 
 def capRechargerII = new MaterialType(name: 'Cap Recharger II', typeId: 2032, price: 423625)
 
+class MaterialDB {
+    def materialByName = [:]
+    def materialByType = [:]
+
+    def leftShift(MaterialType type) {
+        materialByName[type.name] = type
+        materialByType[type.typeId] = type
+    }
+}
+
+def materialDB = new MaterialDB()
+materialDB << tritanium
+materialDB << pyerite
+materialDB << mexallon
+materialDB << isogen
+materialDB << nocxium
+materialDB << morphite
+materialDB << megacyte
+materialDB << capRechargerI
+materialDB << capRechargerII
+materialDB << ramET
+materialDB << superconductors
+materialDB << nanotransostors
+materialDB << phenolCompos
+materialDB << terahertzMetamaterials
+materialDB << tungstenCarbide
+materialDB << fullerides
+materialDB << nanoelMicroproc
+materialDB << tesseractCapUnit
+
+println materialDB.materialByName
+println materialDB.materialByType
+
+def updatePrice(MaterialDB materialDB) {
+    def Dodixi = 30002659
+    def url = new URL(materialDB.materialByName.values().sum("http://api.eve-central.com/api/marketstat/json?") {MaterialType type -> "typeid=$type.typeId&"} + "usesystem=$Dodixi")
+    def marketText = url.text;
+    println marketText
+    def slurper = new JsonSlurper();
+    def result = slurper.parseText(marketText);
+
+    result.each { marketItem ->
+        def typeId = marketItem.buy.forQuery.types[0]
+        def type = materialDB.materialByType[typeId]
+        type.price = marketItem.buy.max
+    }
+
+    def jsonOutput = new JsonOutput()
+    println jsonOutput.prettyPrint(marketText);
+}
+
+updatePrice(materialDB)
+
 ExpandoMetaClass.enableGlobally()
-Number.metaClass.unit = {type -> new MaterialSlot(type: type, quantity: delegate) }
-Number.metaClass.units = {type -> new MaterialSlot(type: type, quantity: delegate) }
+Number.metaClass.unit = {MaterialType type -> new MaterialSlot(type: type, quantity: delegate) }
+Number.metaClass.units = {MaterialType type -> new MaterialSlot(type: type, quantity: delegate) }
 
 class TransformerBuilder {
     def Transformer transformer
