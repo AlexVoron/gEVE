@@ -126,11 +126,19 @@ class TransformerBuilder {
     }
 
     def compose(String name, Closure closure) {
+        def upperComposite = composite
         composite = new CompositeTransformer(name: name)
         closure.setDelegate(this)
         closure()
         composite.compose()
-        composite
+        def outType = composite.output.iterator().next().type
+        transformers[outType] = composite
+        if (upperComposite != null) {
+            upperComposite << composite
+        }
+        def newComposite = composite
+        composite = upperComposite
+        return newComposite
     }
 }
 
@@ -139,7 +147,9 @@ class TransformerBuilder {
 def builder = new TransformerBuilder()
 def composite = builder.compose("Cap Recharger II Production") {
 // to produce 1 unit of 'Cap Recharger II' take 1 unit of 'Cap Recharger I', 2 units of 'R.A.M.- Energy Tech', 3 units of 'Tritanium', 4 units of 'Pyerite', 5 units of 'Mexallon' and 6 units of 'Noxcium'
-    to.produce 1.unit(capRechargerI) take 1420.units(tritanium), 598.units(pyerite), 767.units(mexallon), 2.units(megacyte)
+    compose("Cap Recharger I Production") {
+        to.produce 1.unit(capRechargerI) take 1420.units(tritanium), 598.units(pyerite), 767.units(mexallon), 2.units(megacyte)
+    }
     to.produce 100.units(ramET) take 529.units(tritanium), 422.units(pyerite), 211.units(mexallon), 78.units(isogen), 35.units(nocxium)
     to.produce 1.unit(nanoelMicroproc) take 2.units(nanotransostors), 6.units(phenolCompos), 2.units(terahertzMetamaterials), 17.units(tungstenCarbide)
     to.produce 1.unit(tesseractCapUnit) take 11.units(fullerides), 1.unit(nanotransostors), 2.units(terahertzMetamaterials), 27.units(tungstenCarbide)

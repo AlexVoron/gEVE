@@ -82,14 +82,14 @@ class CompositeTransformer extends Transformer {
         transformer.output.each {
             slot ->
                 if (slot.link == null) {
-                    output << new MaterialSlot(type: slot.type, quantity: slot.quantity * coef)
+                    output << new MaterialSlot(type: slot.type, quantity: slot.quantity * coef, transformer: this)
                 }
         }
 
         transformer.input.each {
             MaterialSlot slot ->
                 if (slot.link == null) {
-                    input << new MaterialSlot(type: slot.type, quantity: slot.quantity * coef)
+                    input << new MaterialSlot(type: slot.type, quantity: slot.quantity * coef, transformer: this)
                 } else {
                     def coef1 = coef * slot.quantity / slot.link.from.quantity
                     compose0(slot.link.from.transformer, coef1)
